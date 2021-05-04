@@ -62,6 +62,11 @@ def render():
     level_str = u'\u2B50'
     for i in range(level):
         level_str = level_str + u'\u2B50'
+        
+     if liked == True:
+        liked = '1'
+     else:
+        liked = '0'
 
     if bio is None:
         bio = ""
