@@ -66,7 +66,7 @@ def render():
      if liked == True:
         liked = 'continue'
      else:
-        liked = '0'
+        liked = 'stop'
 
     if bio is None:
         bio = ""
