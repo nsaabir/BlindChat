@@ -64,7 +64,7 @@ def render():
         level_str = level_str + u'\u2B50'
         
      if liked == True:
-        liked = '1'
+        liked = 'continue'
      else:
         liked = '0'
 
