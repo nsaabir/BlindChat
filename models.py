@@ -6,6 +6,7 @@ class User(db.Model):
     name = db.Column(db.String(64))
     gender = db.Column(db.String(10))
     first_name = db.Column(db.String(64))
+    last_name = db.Column(db.String(64))
     pic_url = db.Column(db.String(250))
     status = db.Column(db.Boolean) # pause status-- True if messages are paused, may be at a quick reply
     messages = db.Column(db.String(2000)) # upto two messages stored while convo is paused
@@ -26,6 +27,8 @@ class User(db.Model):
             self.gender = gender
         if first_name is not None:
             self.first_name = first_name
+        if last_name is not None:
+            self.last_name = last_name
         if pic_url is not None:
             self.pic_url = pic_url
 
@@ -44,6 +47,9 @@ class WaitingListUser(db.Model):
     id = db.Column(db.String(64), primary_key=True)
     gender = db.Column(db.String(10))
     interest = db.Column(db.String(10))
+    first_name = db.Column(db.String(64))
+    last_name = db.Column(db.String(64))
+    pic_url = db.Column(db.String(250))
 
     def __init__(self, id, gender, interest):
         self.id = id
