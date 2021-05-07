@@ -20,7 +20,7 @@ class User(db.Model):
         self.status = False
         self.messages = ""
 
-    def add_details(self, name, first_name, gender, pic_url):
+    def add_details(self, name, first_name, last_name, gender, pic_url):
         if name is not None:
             self.name = name
         if gender is not None:
